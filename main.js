@@ -65,6 +65,8 @@ function bersihkan() {
   document.getElementById('nama').value = ''
   document.getElementById('harga').value = ''
   document.getElementById('qty').value = 1
+  
+  modeSimpan()
 }
 //fungsi untuk menghapus item barang
 function hapus(index) {
