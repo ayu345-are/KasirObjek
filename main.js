@@ -1,6 +1,10 @@
 // array global untuk menyimpan data barang
 // ambil dari local storage jika ada, jika tidak buat array kosong 
-let dataBarang = JSON.parse(localStorage.getItem("KASIR"))  || []
+let dataBarang = JSON.parse(localStorage.getItem("KASIR"))  || [{nama: "pensil",
+  harga: 10000,
+  qty : 2
+  
+}]
 
 // fungsi format rupiah 
 function rupiah(angka) {
@@ -139,6 +143,8 @@ function modeSimpan() {
   document.getElementById('tombolTambah').disabled = false
   document.getElementById('tombolUpdate').disabled = true
 }
+simpanKeStorage()
+
 // memanggil fungsi tampikan untuk menampilkan 
 //data barang saat pertama kali di halaman dimuat
 tampilkan()
